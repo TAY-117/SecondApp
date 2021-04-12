@@ -1,20 +1,17 @@
 ﻿using System;
+
 class MainClass
 {
 	public static void Main(string[] args)
 	{
-		const string СonstName = "Constantin";
-		string МyName;
-		МyName = "Alisa";
+		string MyName = "Bob";
+		byte MyAge = 27;
+		bool HaveIApet = true;
+		float MyShoeSize = 37.5f;
 
-		Console.WriteLine(СonstName);
-		Console.WriteLine(МyName);
-		Console.WriteLine("\t Привет, мир!");
-		Console.WriteLine("\t Мне много лет.");
-		Console.WriteLine("\t My name is \n  {0}", МyName);
-		Console.WriteLine('\u0023');//символ # в Hex-коде ASCII
-		Console.WriteLine('\x23');  //символ # в Hex-коде ASCII
-		Console.WriteLine((char)35);//преобразование Dec-кода ASCII символ #
-		Console.ReadKey();
+		Console.WriteLine("My name is " + MyName);
+		Console.WriteLine("MyAge " + MyAge);
+		Console.WriteLine("Do I have a pet? " + HaveIApet);
+		Console.WriteLine("My shoe size is " + MyShoeSize);
 	}
 }
