@@ -32,6 +32,19 @@ class MainClass
 		Console.WriteLine("Do I have a pet? " + HaveIApet);
 		Console.WriteLine("My shoe size is " + MyShoeSize);
 
+		//Вариант вывода интерполяцией (способ так называется, когда добавляют $ перед строкой,
+		//а переменные заключают в {}
+		Console.WriteLine($"My name is {MyName}");
+		Console.WriteLine($"MyAge {MyAge}");
+		Console.WriteLine($"Do I have a pet? {HaveIApet}");
+		Console.WriteLine($"My shoe size is {MyShoeSize}");
+
+		//Вариант вывода когда зарезервированы места для переменных,
+		//а переменные указвают потом, перечисляя через запятую
+		Console.WriteLine("My name is {0}\nMyAge {1}", MyName, MyAge);
+		Console.WriteLine("Do I have a pet? {0}", HaveIApet);
+		Console.WriteLine("My shoe size is {0}", MyShoeSize);
+
 		//пример получения инфы о диапазоне значений от типа данных
 		Console.WriteLine("byteMin {0} ", byte.MinValue);
 		Console.WriteLine("byteMax {0} ", byte.MaxValue);
@@ -46,6 +59,8 @@ class MainClass
 		Day_of_week my_favorite_day;
 		my_favorite_day = Day_of_week.friday;
 		Console.WriteLine(my_favorite_day);
+
+		Console.WriteLine("\t Привет,\n мир!");
 
 		Console.ReadKey();
 	}
