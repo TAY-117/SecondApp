@@ -64,6 +64,7 @@ class MainClass
 		my_favorite_day = Day_of_week.friday;
 		Console.WriteLine(my_favorite_day);
 
+		//имитация диалого с компутером
 		string CompName = "Computer";
 		Console.WriteLine("\t Привет,\n мир!");
 		Console.WriteLine("Привет, человек!");
@@ -72,10 +73,18 @@ class MainClass
 		MyName = Console.ReadLine();
 		Console.WriteLine("Рад встрече, {0}!", MyName);
 
+		//Выражения с оперециями умножения, деления и целочисленного деления
 		double result = 5d / 2d * 3d;
 		Console.WriteLine("Результат 5 / 2 * 3 = {0}", result);
 		result = 10 % 3;
 		Console.WriteLine("Результат 10 % 3 = {0}", result);
+
+		//пример кода явного преобразования типов, и преобразования в строки
+		byte bytdata = 6;
+		int intdata = (int) bytdata;
+		string strdata = intdata.ToString();
+		Console.WriteLine(intdata);
+		Console.WriteLine(strdata);
 
 		Console.ReadKey();
 	}
