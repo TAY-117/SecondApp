@@ -86,6 +86,32 @@ class MainClass
 		Console.WriteLine(intdata);
 		Console.WriteLine(strdata);
 
+		//пример кода с преобразование целых строк в целые числа
+		int int_age; //рабочая переменная для экспериментов с возрастом
+
+		//вариант с конвертером Convert
+		Console.Write("Enter your age: ");
+		int_age = Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("Your age is {0}.", int_age);
+
+		//вариант с разобрателем Parse (от слова "разобраться")
+		Console.Write("Enter your age: ");
+		int_age = int.Parse(Console.ReadLine());
+		Console.WriteLine("Your age is {0}.", int_age);
+
+		//вариант с безопасным разобрателем TryParse
+		bool is_norm; int_age = 0;
+		Console.Write("Enter your age: ");
+		is_norm = int.TryParse(Console.ReadLine(), out int_age);
+		Console.WriteLine("Your age is {0}.", int_age);
+
+		//ещё один диалог с компутером
+		Console.Write("Enter your name: ");
+		string str_name = Console.ReadLine();
+		Console.Write("Enter your age: ");
+		byte byt_age = (byte) int.Parse(Console.ReadLine());
+		Console.WriteLine("Your name: {0}. Your age: {1}.", str_name, byt_age);
+
 		Console.ReadKey();
 	}
 }
