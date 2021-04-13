@@ -4,7 +4,7 @@ class MainClass
 {
 	//создаём перечисление дней недели, явным образом задавая числа по порядку,
 	//хотя по умолчанию у первого всегда 0 и последующие увеличиваются на 1
-	enum day_of_week : byte
+	enum Day_of_week : byte
 	{
 		sunday		= 0,
 		monday		= 1,
@@ -13,6 +13,12 @@ class MainClass
 		thursday		= 4,
 		friday		= 5,
 		saturday		= 6
+	}
+	enum Semaphore : short
+	{
+		red		= 100, 
+		yellow	= 200, 
+		green		= 300
 	}
 	public static void Main(string[] args)
 	{ 
@@ -37,8 +43,8 @@ class MainClass
 		Console.WriteLine("doubleMax {0} ", double.MaxValue);
 
 		//пример использования перечислений
-		day_of_week my_favorite_day;
-		my_favorite_day = day_of_week.friday;
+		Day_of_week my_favorite_day;
+		my_favorite_day = Day_of_week.friday;
 		Console.WriteLine(my_favorite_day);
 
 		Console.ReadKey();
