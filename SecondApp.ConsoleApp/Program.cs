@@ -70,7 +70,12 @@ class MainClass
 		Console.WriteLine("Меня зовут {0}.", CompName);
 		Console.Write("А как тебя зовут? ");
 		MyName = Console.ReadLine();
-		Console.Write("Рад встрече, {0}!", MyName);
+		Console.WriteLine("Рад встрече, {0}!", MyName);
+
+		double result = 5d / 2d * 3d;
+		Console.WriteLine("Результат 5 / 2 * 3 = {0}", result);
+		result = 10 % 3;
+		Console.WriteLine("Результат 10 % 3 = {0}", result);
 
 		Console.ReadKey();
 	}
