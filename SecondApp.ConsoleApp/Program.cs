@@ -2,8 +2,20 @@
 
 class MainClass
 {
-	public static void Main(string[] args)
+	//создаём перечисление дней недели, явным образом задавая числа по порядку,
+	//хотя по умолчанию у первого всегда 0 и последующие увеличиваются на 1
+	enum day_of_week : byte
 	{
+		sunday		= 0,
+		monday		= 1,
+		tuesday		= 2,
+		wednesday	= 3,
+		thursday		= 4,
+		friday		= 5,
+		saturday		= 6
+	}
+	public static void Main(string[] args)
+	{ 
 		string MyName = "Bob";
 		byte MyAge = 27;
 		bool HaveIApet = true;
@@ -23,6 +35,11 @@ class MainClass
 		Console.WriteLine("floatMax {0} ", float.MaxValue);
 		Console.WriteLine("doubleMin {0} ", double.MinValue);
 		Console.WriteLine("doubleMax {0} ", double.MaxValue);
+
+		//пример использования перечислений
+		day_of_week my_favorite_day;
+		my_favorite_day = day_of_week.friday;
+		Console.WriteLine(my_favorite_day);
 
 		Console.ReadKey();
 	}
