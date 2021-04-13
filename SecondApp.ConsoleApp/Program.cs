@@ -31,6 +31,7 @@ class MainClass
 		Console.WriteLine("MyAge " + MyAge);
 		Console.WriteLine("Do I have a pet? " + HaveIApet);
 		Console.WriteLine("My shoe size is " + MyShoeSize);
+		Console.WriteLine();
 
 		//Вариант вывода интерполяцией (способ так называется, когда добавляют $ перед строкой,
 		//а переменные заключают в {}
@@ -38,12 +39,14 @@ class MainClass
 		Console.WriteLine($"MyAge {MyAge}");
 		Console.WriteLine($"Do I have a pet? {HaveIApet}");
 		Console.WriteLine($"My shoe size is {MyShoeSize}");
+		Console.WriteLine();
 
 		//Вариант вывода когда зарезервированы места для переменных,
 		//а переменные указвают потом, перечисляя через запятую
 		Console.WriteLine("My name is {0}\nMyAge {1}", MyName, MyAge);
 		Console.WriteLine("Do I have a pet? {0}", HaveIApet);
 		Console.WriteLine("My shoe size is {0}", MyShoeSize);
+		Console.WriteLine();
 
 		//пример получения инфы о диапазоне значений от типа данных
 		Console.WriteLine("byteMin {0} ", byte.MinValue);
@@ -54,13 +57,20 @@ class MainClass
 		Console.WriteLine("floatMax {0} ", float.MaxValue);
 		Console.WriteLine("doubleMin {0} ", double.MinValue);
 		Console.WriteLine("doubleMax {0} ", double.MaxValue);
+		Console.WriteLine();
 
 		//пример использования перечислений
 		Day_of_week my_favorite_day;
 		my_favorite_day = Day_of_week.friday;
 		Console.WriteLine(my_favorite_day);
 
+		string CompName = "Computer";
 		Console.WriteLine("\t Привет,\n мир!");
+		Console.WriteLine("Привет, человек!");
+		Console.WriteLine("Меня зовут {0}.", CompName);
+		Console.Write("А как тебя зовут? ");
+		MyName = Console.ReadLine();
+		Console.Write("Рад встрече, {0}!", MyName);
 
 		Console.ReadKey();
 	}
