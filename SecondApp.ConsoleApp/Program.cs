@@ -118,6 +118,11 @@ class MainClass
 		byte byt_age = checked((byte) int.Parse(Console.ReadLine()));
 		Console.WriteLine("Your name: {0}. Your age: {1}.", str_name, byt_age);
 
+		//пример конвертации целого числа в перечисление (без проверки диапазона)
+		Console.Write("Enter your favorite day of week: ");
+		my_favorite_day = (Day_of_week) int.Parse(Console.ReadLine());
+		Console.WriteLine("Your favorite day of week: {0}", my_favorite_day);
+
 		Console.ReadKey();
 	}
 }
