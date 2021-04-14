@@ -123,6 +123,15 @@ class MainClass
 		my_favorite_day = (Day_of_week) int.Parse(Console.ReadLine());
 		Console.WriteLine("Your favorite day of week: {0}", my_favorite_day);
 
+		//пример кода с var и неявной типизацией,
+		//когда тип определяется присваиваемым значением при инициализации
+		Console.Write("Enter your age: ");
+		var var_age = int.Parse(Console.ReadLine());
+		Console.WriteLine("Your age is {0}.", var_age);
+		Console.Write("Enter your favorite day of week: ");
+		var var_favor_day = (Day_of_week) int.Parse(Console.ReadLine());
+		Console.WriteLine("Your favorite day of week: {0}", var_favor_day);
+
 		Console.ReadKey();
 	}
 }
