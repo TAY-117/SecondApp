@@ -126,7 +126,7 @@ class MainClass
 		//пример кода с var и неявной типизацией,
 		//когда тип определяется присваиваемым значением при инициализации
 		Console.Write("Enter your name: ");
-		var var_name = Convert.ToString(Console.ReadLine());
+		var var_name = Console.ReadLine();
 		Console.Write("Enter your age: ");
 		var var_age = int.Parse(Console.ReadLine());
 		Console.WriteLine("Your name: {0}. Your age: {1}.", var_name, var_age);
