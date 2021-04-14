@@ -89,27 +89,33 @@ class MainClass
 		//пример кода с преобразование целых строк в целые числа
 		int int_age; //рабочая переменная для экспериментов с возрастом
 
-		//вариант с конвертером Convert
+		//вариант с конвертером Convert, может завершиться с ошибкой преобразования типов данных
+		//если, например, попытаемся конвертировать строку (string) "77 лет" в целое число (int)
 		Console.Write("Enter your age: ");
 		int_age = Convert.ToInt32(Console.ReadLine());
 		Console.WriteLine("Your age is {0}.", int_age);
 
 		//вариант с разобрателем Parse (от слова "разобраться")
+		//сгенерить ошибку как и Convert в аналогичной ситуации
 		Console.Write("Enter your age: ");
 		int_age = int.Parse(Console.ReadLine());
 		Console.WriteLine("Your age is {0}.", int_age);
 
 		//вариант с безопасным разобрателем TryParse
+		//если не нормально прошло, то останется прежнее значение int_age = 0
 		bool is_norm; int_age = 0;
 		Console.Write("Enter your age: ");
 		is_norm = int.TryParse(Console.ReadLine(), out int_age);
 		Console.WriteLine("Your age is {0}.", int_age);
 
 		//ещё один диалог с компутером
+		//проверка через checked конвертации int в byte (вдруг произошло "обрезание"?)
+		//если не нормально прошло, то генирится ошибка, которую в последствии надо будет
+		//обработать в обработчике ошибок (тут этого пока нет)
 		Console.Write("Enter your name: ");
 		string str_name = Console.ReadLine();
 		Console.Write("Enter your age: ");
-		byte byt_age = (byte) int.Parse(Console.ReadLine());
+		byte byt_age = checked((byte) int.Parse(Console.ReadLine()));
 		Console.WriteLine("Your name: {0}. Your age: {1}.", str_name, byt_age);
 
 		Console.ReadKey();
